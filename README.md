@@ -22,8 +22,13 @@ community contribution workflows.
 
 ## Screenshots
 
-Screenshots are being prepared for the first public release. The local
+![Tourney Method home page](docs/images/home.png)
+
+The home page of the hosted service at <https://tourneymethod.com/>. The local
 application is available at <http://localhost> after completing the setup below.
+
+This repository is the open-source release. The hosted service is deployed from
+a separate private production repository.
 
 ## Technology
 
@@ -70,7 +75,7 @@ request flow, compatibility expectations, and integration conventions.
 ### Installation
 
 ```bash
-git clone https://github.com/Garalulu/tourney-method.git
+git clone https://github.com/sionpkr/tourney-method.git
 cd tourney-method
 cp .env.example .env
 docker compose up -d
@@ -105,6 +110,12 @@ docker compose exec -u sail laravel.test npm run build
 Individual suites are available through `composer test-unit`,
 `composer test-feature`, `composer test-integration`, and
 `composer test-livewire`.
+
+## Development approach
+
+The maintainer develops with AI coding tools (Claude Code, Codex, and GLM) and
+verifies changes with the isolation check, `composer check`, and the Pest suites
+before release.
 
 ## Contributor documentation
 
